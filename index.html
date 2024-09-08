@@ -1,1 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface de Atividades Educativas</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            background-color: #8533f1;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-y: auto;
+        }
 
+        .header {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            animation: gradientBackground 3s infinite alternate;
+            padding: 20px;
+            border-radius: 15px;
+            background: linear-gradient(90deg, #ff0057, #ffa500, #32cd32, #1e90ff, #ff00ff);
+            background-size: 400% 400%;
+        }
+
+        .header img {
+            width: 50px;
+            margin-right: 15px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            color: white;
+            margin: 0;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        .image-container {
+            background: linear-gradient(135deg, #6f27c2, #8533f1);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .instructions h2 {
+            margin: 0 0 20px 0;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .instructions {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .description {
+            background-color: #8533f1;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: left;
+            max-width: 90%;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .description h3 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        @media (min-width: 600px) {
+            .image-container {
+                width: 80%;
+            }
+
+            .description {
+                max-width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="https://raw.githubusercontent.com/Luanzinh0fc/Luanzinh0fc-Banco-de-dados-p-blicos/main/1000008714-removebg.png" alt="Ícone do StudyTask">
+        <h1>StudyTask</h1>
+    </div>
+
+    <div class="instructions">
+        <h2>Instruções para baixar a atividade:</h2>
+        <p>Mantenha o dedo pressionado na imagem da atividade para baixar. Veja a demonstração abaixo:</p>
+        <img src="https://github.com/StudyTask-ai/BANCO-DE-IMAGENS/blob/main/image.gif?raw=true" alt="Demonstração" style="width: 100px; margin-top: 10px;">
+    </div>
+
+    <div class="image-container">
+        <img id="activity-image" src="https://github.com/StudyTask-ai/BANCO-DAS-ATIVIDADES-DO-3-BIMESTRE/blob/main/ATIVIDADE%20DE%20PORTUGU%C3%8AS%201.jpg?raw=true" alt="Imagem da Atividade 1">
+        <audio id="audio" preload="auto">
+            <source src="https://raw.githubusercontent.com/StudyTask-ai/BANCO-DE-IMAGENS/main/generated-voice-abf4faeb-f468-422d-8956-c3b722f6f27a.mp3" type="audio/mp3">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+    </div>
+
+    <div class="image-container">
+        <img id="activity-image2" src="https://github.com/StudyTask-ai/BANCO-DAS-ATIVIDADES-DO-3-BIMESTRE/blob/main/ATIVIDADES%20DE%20PORTUGU%C3%8AS%202.jpg?raw=true" alt="Imagem da Atividade 2">
+        <audio id="audio2" preload="auto">
+            <source src="https://raw.githubusercontent.com/StudyTask-ai/BANCO-DE-IMAGENS/main/generated-voice-abf4faeb-f468-422d-8956-c3b722f6f27a.mp3" type="audio/mp3">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+    </div>
+
+    <div class="description">
+        <h3>Substituição de Palavras por Sinônimos</h3>
+        <p>Esta atividade consiste em trocar as palavras grifadas em um texto por sinônimos. Ela pode ser útil para:</p>
+        <ul>
+            <li><strong>Ampliar o vocabulário:</strong> Ao procurar sinônimos, os alunos aprendem novas palavras e seus significados.</li>
+            <li><strong>Melhorar a compreensão:</strong> A substituição por sinônimos pode ajudar a entender melhor o texto.</li>
+            <li><strong>Desenvolver a criatividade:</strong> Esse exercício incentiva os alunos a pensar em diferentes formas de expressar suas ideias.</li>
+        </ul>
+        <p>A atividade é adequada para diferentes níveis escolares e pode ser ajustada conforme a dificuldade dos alunos.</p>
+        <p><strong>Outras sugestões de títulos:</strong></p>
+        <ul>
+            <li>"Enriquecendo o Vocabulário"</li>
+            <li>"Explorando a Riqueza da Língua"</li>
+            <li>"Trocando Palavras, Expandindo Conhecimentos"</li>
+        </ul>
+        <p>A escolha do título depende do público-alvo e dos objetivos da atividade.</p>
+    </div>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const activityImage = document.getElementById('activity-image');
+
+        const audio2 = document.getElementById('audio2');
+        const activityImage2 = document.getElementById('activity-image2');
+
+        // Tocar o áudio quando a primeira imagem é clicada
+        activityImage.addEventListener('click', () => {
+            audio.play();
+        });
+
+        // Tocar o áudio quando a segunda imagem é clicada
+        activityImage2.addEventListener('click', () => {
+            audio2.play();
+        });
+    </script>
+</body>
+</html>
